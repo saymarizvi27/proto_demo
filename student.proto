@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+message Student{
+    int32 rollNumber = 1;
+    string name = 2;
+    GENDER_TYPE gender = 3;
+    string class = 4;
+    string section = 5;
+    float totalMarks =6;
+
+    enum GENDER_TYPE{
+        FEMALE = 0;
+        MALE = 1;
+    }
+}
+
+
+message Students {
+    repeated Student students = 1;
+}
